@@ -1,0 +1,232 @@
+<html lang="ru">
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather</title>
+</head>
+
+<!-- Body -->
+<body onresize="buttonwith()" onload="buttonwith()">
+    <!-- Header -->
+    <header>
+        <h1>Погода здесь</h1>
+        <button id="currentlocation__button">Обновить геолокацию</button>
+    </header>
+    <!-- Main -->
+    <main>
+            <section id="maincity">
+                <h2 id="currentlocation">ГородA</h2>
+                <section id ="maincity__info">    
+                <img class="bigpic" src="images/sun2.png">
+                <p id="currenttemp">66°C</p>
+                <ul id="maininfo">
+                    <li class="param">
+                        <p class="standart">Ветер</p>
+                        <p class="value">Значение2</p>
+                    </li>
+                    <li class="param">
+                        <p class="standart">Облачность</p>
+                        <p class="value">Значение2</p>
+                    </li>
+                    <li class="param">
+                        <p class="standart">Давление</p>
+                        <p class="value">Значение2</p>
+                    </li>
+                    <li class="param">
+                        <p class="standart">Влажность</p>
+                        <p class="value">Значение2</p>
+                    </li>
+                    <li class="param">
+                        <p class="standart">Координаты</p>
+                        <p class="value">Значение2</p>
+                    </li>
+                </ul>
+                </section>
+                
+            </section>
+               <section id="favorite">
+                <h1>Избранное</h1>
+                  <div class="add">
+                   <input id="inputbox" placeholder="Введите название города">
+                   <button id="add__button">+</button>
+                   </div>
+                </section>
+                
+            <section id="sidecities">
+                <div class="sidecity__info">
+                    <h3 class="location">ГородХ</h3>
+                    <p class="temp">5°C</p>
+                    <img class="smallpic" src="images/sun2.png">
+                    <button class="close__button">×</button>
+                    <ul class="info">
+                        <li class="param">
+                            <p class="standart">Ветер</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Облачность</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Давление</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Влажность</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Координаты</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidecity__info">
+                    <h3 class="location">ГородХ</h3>
+                    <p class="temp">5°C</p>
+                    <img class="smallpic" src="images/sun2.png">
+                    <button class="close__button">×</button>
+                    <ul class="info">
+                        <li class="param">
+                            <p class="standart">Ветер</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Облачность</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Давление</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Влажность</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Координаты</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidecity__info">
+                    <h3 class="location">ГородХ</h3>
+                    <p class="temp">5°C</p>
+                    <img class="smallpic" src="images/sun2.png">
+                    <button class="close__button">×</button>
+                    <ul class="info">
+                        <li class="param">
+                            <p class="standart">Ветер</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Облачность</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Давление</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Влажность</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Координаты</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidecity__info">
+                    <h3 class="location">ГородХ</h3>
+                    <p class="temp">5°C</p>
+                    <img class="smallpic" src="images/sun2.png">
+                    <button class="close__button">×</button>
+                    <ul class="info">
+                        <li class="param">
+                            <p class="standart">Ветер</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Облачность</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Давление</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Влажность</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Координаты</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidecity__info">
+                    <h3 class="location">ГородХ</h3>
+                    <p class="temp">5°C</p>
+                    <img class="smallpic" src="images/sun2.png">
+                    <button class="close__button">×</button>
+                    <ul class="info">
+                        <li class="param">
+                            <p class="standart">Ветер</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Облачность</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Давление</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Влажность</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Координаты</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidecity__info">
+                    <h3 class="location">ГородХ</h3>
+                    <p class="temp">5°C</p>
+                    <img class="smallpic" src="images/sun2.png">
+                    <button class="close__button">×</button>
+                    <ul class="info">
+                        <li class="param">
+                            <p class="standart">Ветер</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Облачность</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Давление</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Влажность</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                        <li class="param">
+                            <p class="standart">Координаты</p>
+                            <p class="value">Значение2</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+    </main>
+</body>
+
+</html>
