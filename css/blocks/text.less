@@ -1,45 +1,39 @@
 // main: ../style.less
 
-h1{
-    display: inline;
+h2{
     font-weight: 500;
     font-size: 8vmin;
 }
 
-h2{
+h1{
     font-size: 8vmin;
     font-weight: 800;
 }
 
 #currenttemp{
     display: inline;
-    font-size: 10vmax;
+    font-size: 6vmax;
     margin-left: 2%;
 }
 
 .standart{
     color: @white;
-    display: inline;
     font-size: 1.5vmax;
-    float: left;
     margin: 0;
-    vertical-align: center;
 }
 
 .value{
     color: @white;
     font-size: 1.5vmax;
-    float: right;
     margin: 0;
-    vertical-align: center;
 }
 
 
 input{
     font-size: 2vmin;
-    width: 50%;
-    padding: 1.5vmin;
-    margin-left: 10%;    
+    width: 100%;
+    padding-left-right: 1vmin;
+    padding-top-bottom: 1.5vmin;
 }
 
 .location{
@@ -51,5 +45,11 @@ input{
     display: inline;
     margin-left: 2vmax;
     font-size: 3.5vmax;
-    float: none;
+}
+
+
+.param{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

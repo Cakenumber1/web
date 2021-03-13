@@ -2,10 +2,8 @@
 
 #maincity{
     display: block;
-    width: 100%;
 }
 #maincity__info{
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 5vmax;
@@ -13,29 +11,26 @@
 }
 
 #sidecities{
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 5vmax;
+    grid-row-gap: 4vmax;
     
 }
 #favorite{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 5vmax;
-    align-items: center 
-}
-
-.addition{
-    width: 90%;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10%;
 }
 
-.sidecity__info{
-    display: inline;
-    width: 90%;
-    float: left;
-    margin-top: 3em; 
+#add{
+    display: inline-flex;
+    gap: 5%
 }
+
+
+
+
+
 
