@@ -1,68 +1,75 @@
 // main: ../style.less
-@media screen and (max-width: 1000px)  {
-    
-    #maincity__info{
+@media screen and (max-width: 1000px) {
+
+    .maincity {
         grid-template-columns: 1fr;
     }
-    
-    
-    input{
+
+    .maincity__left {
+        display: flex;
+        align-items: center
+    }
+
+    h1 {
+        text-align: center
+    }
+
+    .inputbox {
         font-size: 4vmin;
         width: 70%;
         padding: 1vmin;
         margin-left: 1%;
 
-    }    
-    
-    #sidecities{
-        grid-template-columns: 1fr;
     }
-    
-    .standart{
+
+
+
+    .standart {
         font-size: 2.5vmax;
     }
 
-    .value{
+    .value {
         font-size: 2vmax;
     }
-    
-    #favorite{
+
+    #favorite {
         display: block;
         margin-bottom: 5%;
     }
-    
-    #add{
+
+    #add {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    
-    #currenttemp{
+
+    #currenttemp {
         font-size: 20vmin;
         margin-bottom: 3%;
         margin-block-start: 0;
     }
-    #firstd{
+
+    #firstd {
         justify-content: center;
     }
-    
-    #add__button{
+
+    #add__button {
         width: 6vw;
         height: 6vw;
         font-size: 4vw;
     }
 
-    .close__button{
+    .close__button {
         width: 5vw;
         height: 5vw;
         font-size: 3vw;
     }
-    
-    #currentlocation__button{
+
+    #currentlocation__button {
         display: none
     }
-    
-    #currentlocation__button__mobile{
+
+    #currentlocation__button__mobile {
         display: flex;
         align-items: center;
         height: 15vmin;
@@ -73,10 +80,13 @@
         margin-left: 10%;
         transform: rotate(90deg);
     }
+    .sidecities {
+        grid-template-columns: 1fr;
+    }
 }
 
-@media screen and (max-width: 700px)  {
-        .close__button{
+@media screen and (max-width: 700px) {
+    .close__button {
         width: 6vw;
         height: 6vw;
         font-size: 4vw;

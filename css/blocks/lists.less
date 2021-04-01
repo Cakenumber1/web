@@ -1,13 +1,25 @@
 // main: ../style.less
 
-#maininfo{
-    float: right;
+.main__info {
     font-size: 75%;
     width: 100%;
     margin-bottom: 3vmin;
+    margin-left: 0;
+    padding-left: 0;
 }
 
-.param{
+ul.info li {
+    background-color: @gray;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 2vmax;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.param {
     background-color: @gray;
     padding: 10px;
     margin-bottom: 10px;
@@ -15,7 +27,8 @@
     list-style-type: none;
 }
 
-.info{
+
+.info {
     margin-left: 0;
     padding-left: 0;
 }
