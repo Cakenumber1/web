@@ -49,7 +49,6 @@ async function realCity(position) {
 
 
 function refreshButton() {
-    navigator.geolocation.getCurrentPosition(localCity, defaultCity);
     let mc = document.querySelector('.maincity');
 
     mc.querySelector('h1').textContent = "Загрузка";
@@ -59,9 +58,11 @@ function refreshButton() {
     let list_mc = mc.querySelector('.info');
     let vals = list_mc.querySelectorAll('.value');
 
-    vals[0].textContent = '.';
-    vals[1].textContent = '.';
-    vals[2].textContent = '.';
-    vals[3].textContent = '.';
-    vals[4].textContent = '.';
+    vals[0].textContent = '';
+    vals[1].textContent = '';
+    vals[2].textContent = '';
+    vals[3].textContent = '';
+    vals[4].textContent = '';
+    
+    navigator.geolocation.getCurrentPosition(realCity, defaultCity);
 }

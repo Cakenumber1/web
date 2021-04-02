@@ -2,8 +2,7 @@ async function addCity() {
     let text = document.querySelector('.inputbox').value.toLowerCase();
     if (text === '') {
         alert("Надо ввести название города")
-    }
-    else {
+    } else {
 
 
         document.querySelector('.inputbox').value = "";
@@ -62,4 +61,6 @@ function deleteCity(btn) {
         cities[i].id = i;
         window.localStorage.setItem(i, cities[i].querySelector('h3').textContent)
     };
+    var a = document.getElementsByClassName("sidecities")[0];
+    a.style = "flex"
 }
