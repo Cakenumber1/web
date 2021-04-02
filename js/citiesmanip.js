@@ -51,16 +51,15 @@ function createLoadingCity() {
 
 
 function deleteCity(btn) {
-    let id = btn.parentElement.parentElement.id;
+    let id = btn.parentElement.parentElement.parentElement.id;
+    console.log(id)
     window.localStorage.removeItem(id);
-    btn.parentElement.parentElement.remove();
+    btn.parentElement.parentElement.parentElement.remove();
 
     let cities = document.querySelectorAll('.city')
-    for (let i = 0; i < window.localStorage.length; i++) {
+    for (let i = id-1; i < window.localStorage.length; i++) {
         window.localStorage.removeItem(cities[i].id);
         cities[i].id = i;
         window.localStorage.setItem(i, cities[i].querySelector('h3').textContent)
     };
-    var a = document.getElementsByClassName("sidecities")[0];
-    a.style = "flex"
 }
