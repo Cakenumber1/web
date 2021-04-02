@@ -11,7 +11,7 @@ async function addCity() {
         let cities = document.querySelector('.sidecities');
 
         let success = (data) => {
-            for (let i = 0; i <= window.localStorage.length; i++) {
+            for (let i = 0; i < window.localStorage.length; i++) {
                 if (data.name === window.localStorage.getItem(i)) {
                     alert("Город уже существует");
                     return;
@@ -54,7 +54,7 @@ function deleteCity(btn) {
     btn.parentElement.parentElement.parentElement.remove();
 
     let cities = document.querySelectorAll('.city')
-    for (let i = id - 1; i < window.localStorage.length; i++) {
+    for (let i = id; i < window.localStorage.length; i++) {
         window.localStorage.removeItem(cities[i].id);
         cities[i].id = i;
         window.localStorage.setItem(i, cities[i].querySelector('h3').textContent)
