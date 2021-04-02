@@ -49,7 +49,6 @@ function createLoadingCity() {
 
 function deleteCity(btn) {
     let id = btn.parentElement.parentElement.parentElement.id;
-    console.log(id)
     window.localStorage.removeItem(id);
     btn.parentElement.parentElement.parentElement.remove();
 
