@@ -10,7 +10,7 @@ function printMainCity(data){
   let mc_list = mc.querySelector('.info');
   let vars = mc_list.querySelectorAll('.value');
 
-  vars[0].textContent = `${data.wind.speed}м/с`;
+  vars[0].textContent = `${data.wind.speed} м/с`;
   vars[1].textContent = `${data.weather[0]['description']}`;
   vars[2].textContent = `${data.main.pressure} мм. рт. ст.`;
   vars[3].textContent = `${data.main.humidity}%`;
@@ -29,9 +29,9 @@ function printCity(data, city) {
   let tc_list = tc.content.querySelector('.info');
   let vars = tc_list.querySelectorAll('.value');
 
-  vars[0].textContent = `${data.wind.speed}м/с`;
+  vars[0].textContent = `${data.wind.speed} м/с`;
   vars[1].textContent = `${data.weather[0]['description']}`;
-  vars[2].textContent = `${data.main.pressure}мм. рт. ст.`;
+  vars[2].textContent = `${data.main.pressure} мм. рт. ст.`;
   vars[3].textContent = `${data.main.humidity}%`;
   vars[4].textContent = `[${data.coord.lat}, ${data.coord.lon}]`;
 
