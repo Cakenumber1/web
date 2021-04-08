@@ -6,9 +6,7 @@ window.onload = async function() {
     for (let j = 0; j < window.localStorage.length; j++) {
         keys.push(j);
     }
-
     let requests = keys.map(key => getInfoCityName(window.localStorage.getItem(key)))
-
     Promise.all(requests)
         .then(responses => responses.forEach(
             data => {
@@ -22,6 +20,7 @@ window.onload = async function() {
         .catch(error => {
             console.log(error);
         })
+    pressEnter();
     gridfix()
 }
 
@@ -65,4 +64,16 @@ function refreshButton() {
     vals[4].textContent = '';
     
     navigator.geolocation.getCurrentPosition(realCity, defaultCity);
+}
+
+
+function pressEnter() {
+    //console.log("123")
+    document.querySelector('.inputbox').addEventListener('keypress',
+        function (e) {
+            if (e.key === 'Enter') {
+                addCity();
+            }
+        });
+    
 }
