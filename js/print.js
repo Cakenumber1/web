@@ -8,6 +8,8 @@ function printMainCity(data) {
 
 }
 
+
+
 function printAll(city, data, place) {
     let list = city.querySelector('.info');
     let vars = list.querySelectorAll('.value');
@@ -56,16 +58,11 @@ function printLoader(data) {
 function printListCities(data, count) {
     let name = "city" + count
     let city = document.getElementById(name)
-    let tc = document.querySelector('#template1');
     let place = ['h3', '.temp', '.smallpic']
-    let clone = document.importNode(tc.content, true);
+    
+    printAll(city, data, place)
 
+    //city.append(clone);
 
-    city.innerHTML = ""
-
-    printAll(tc.content, data, place)
-
-    city.append(clone);
-
-    cleartemp(tc.content, place)
+    //cleartemp(tc.content, place)
 }

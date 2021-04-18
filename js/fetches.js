@@ -47,6 +47,14 @@ async function fetchAddCity(cityName) {
     }
     throw new Error(`Bad request ${data.status}`);
 }
+async function fetchCityByName(cityName) {
+    let data = await fetch(`https://web-app-bestone.herokuapp.com/weather/city?q=${cityName}`);
+    if (data.status === 200) {
+        printMainCity(await data.json())
+    } else {
+        alert(new Error(`Bad request ${data.status}`));
+    }
+}
 
 async function fetchDeleteCity(cityName) {
     let data = await fetch(`https://web-app-bestone.herokuapp.com/favourites?q=${cityName}`, {method: "DELETE"});
