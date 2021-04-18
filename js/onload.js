@@ -1,79 +1,68 @@
-window.onload = async function() {
+window.onload = async function () {
     let timer = await navigator.geolocation.getCurrentPosition(realCity, defaultCity);
-    let i = -1;
 
-    let keys = [];
-    for (let j = 0; j < window.localStorage.length; j++) {
-        keys.push(j);
-    }
-    let requests = keys.map(key => getInfoCityName(window.localStorage.getItem(key)))
-    Promise.all(requests)
-        .then(responses => responses.forEach(
-            data => {
-                let cities = document.querySelector('.sidecities');
-                let city = createLoadingCity();
-                city.setAttribute("id", ++i);
-                cities.append(city);
-                printCity(data, city);
-            }
-        ))
-        .catch(error => {
-            console.log(error);
-        })
+    fetchGetFavourites().then(favs)
+
     pressEnter();
-    gridfix()
+    gridfix();
 }
 
-
-let success = (data) => {
-    printMainCity(data);
+let favs = async (data) => {
+    let count = 0
+    let cities = data.favouriteCities;
+    printLoader(cities)
+    try {
+        let requests = await cities.map(cityName => fetch(`https://web-app-bestone.herokuapp.com/weather/city?q=${cityName}`));
+        let responces = await Promise.all(requests)
+        
+        responces = await Promise.all(responces.map(r => r.json()))
+        responces.forEach(responce => printListCities(responce, count++))
+    } catch (e) {
+        alert(e)
+    }
 }
 
-let fail = (error) => {
-    alert(error);
-}
 
 
 async function defaultCity() {
     let nameCity = 'Москва';
 
-    getInfoCityName(nameCity).then(success).catch(fail);
+    fetchCityByName(nameCity)
 }
 
 async function realCity(position) {
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
-    getInfoCoordinats(lat, lon).then(success).catch(fail);
+
+    fetchCityByLocation(lat, lon)
 }
 
 
 function refreshButton() {
     let mc = document.querySelector('.maincity');
+    let list_mc = mc.querySelector('.info');
+    let vals = list_mc.querySelectorAll('.value');
 
     mc.querySelector('h1').textContent = "Загрузка";
     mc.querySelector('.bigpic').src = "images/time-left.png";
     mc.querySelector('#currenttemp').innerHTML = ' ';
-
-    let list_mc = mc.querySelector('.info');
-    let vals = list_mc.querySelectorAll('.value');
 
     vals[0].textContent = '';
     vals[1].textContent = '';
     vals[2].textContent = '';
     vals[3].textContent = '';
     vals[4].textContent = '';
-    
+
     navigator.geolocation.getCurrentPosition(realCity, defaultCity);
 }
 
 
 function pressEnter() {
-    //console.log("123")
     document.querySelector('.inputbox').addEventListener('keypress',
         function (e) {
             if (e.key === 'Enter') {
                 addCity();
             }
         });
-    
+
 }

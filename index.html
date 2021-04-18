@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/fixes.js"></script>
     <script src="js/onload.js"></script>
-    <script src="js/getInfo.js"></script>
-    <script src="js/print.js"></script>
     <script src="js/citiesmanip.js"></script>
+    <script src="js/print.js"></script>
+    <script src="js/fetches.js"></script> 
+    <script src="js/fixes.js"></script>
+        
+    
     <title>Weather</title>
 </head>
 
@@ -79,7 +81,7 @@
     <template id="template1">
         <div>
             <div>
-                <h3 class="location"></h3>
+                <h3 class="location">Загрузка</h3>
                 <p class="temp"></p>
                 <img class="smallpic" src="images/time-left.png">
                 <button type="submit" class="close__button" onclick="deleteCity(this)">x</button>
