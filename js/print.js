@@ -26,19 +26,6 @@ function printAll(city, data, place) {
 
 }
 
-function cleartemp(city, place) {
-    let list = city.querySelector('.info');
-    let vars = list.querySelectorAll('.value');
-
-    city.querySelector(place[0]).textContent = 'Загрузка';
-    city.querySelector(place[1]).innerHTML = '';
-    city.querySelector(place[2]).src = "images/time-left.png";
-
-    for (let i = 0; i < 5; i++) {
-        vars[i].textContent = '.'
-    }
-
-}
 
 
 function printLoader(data) {
@@ -62,7 +49,4 @@ function printListCities(data, count) {
     
     printAll(city, data, place)
 
-    //city.append(clone);
-
-    //cleartemp(tc.content, place)
 }
